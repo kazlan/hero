@@ -1,0 +1,29 @@
+<div *ngIf="!(success || fail)">
+  <p>
+    {{rounds}} rounds of {{enemy_kind}} left
+  </p>
+  <img src="bandit.jpg" alt="" style="width: 320px">
+  <p>
+    Facing: {{enemy.name}} <br>
+    hp: {{enemy.hp}}
+  </p>
+  <p>
+    <button (click)="onAttack()">Attack</button>
+    <button (click)="onHeal()">Heal</button>
+    <button (click)="toTown()">Flee</button>
+  </p>
+  <p class="heroe">
+    {{heroe.nombre}}:&nbsp;{{heroe.hp}}hp&nbsp;exp: {{heroe.exp}}
+  </p>
+  <p id="console">
+  </p>
+
+</div>
+<div *ngIf="success"> 
+  SUCCESS!
+  <button (click)="toTown()">Back to Town</button>
+</div>
+<div *ngIf="fail"> 
+  FAILED! 
+  <button (click)="toTown()">Back to Town</button>
+</div>
