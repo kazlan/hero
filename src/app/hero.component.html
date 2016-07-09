@@ -1,0 +1,10 @@
+<div *ngIf="scene=='town'">
+  <app-town
+    (onNewAdventure)="onNewAdventure($event)">
+  </app-town>
+</div>
+<div *ngIf="scene=='adventure'">
+  <app-adventure
+    (onToTown) = "onToTown($event)"
+  ></app-adventure>
+</div>
